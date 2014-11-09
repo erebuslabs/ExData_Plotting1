@@ -1,4 +1,15 @@
 ## Exploratory Data (exdata-008) Course Project #1
+
+## Running The Code
+* Clone the repo and run `src/plot[1-4].r`
+  * These files rely on the `src/helper.r` file which does all the heavy lifting to get and clean the data
+* The entire project relies on just two add on packages that are auto-installed if missing
+  * <a href="http://cran.r-project.org/web/packages/sqldf/">sqldf</a> - for efficent retrival of data from large files
+  * <a href="http://cran.r-project.org/web/packages/lubridate/">lubridate</a> - for date/time manipulations
+* If you are using the src files without cloning, make sure the plt folder exists a level higher
+  * Future feature will be to include folder creation 
+
+## Project Details
 Replicate 4 Plots using publicly available data from
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
 Learning Repository</a>. Specifically using the "Individual household electric power consumption Data Set" which is available on the coursera course web site.
@@ -39,27 +50,25 @@ A sqlquery is generated with the two dates and a data frame is the result of the
 ```
 
 
-## The Plots
+## The Plots 
+* In each section the requested plot is followed by the one created
+* The plots generated in this assignment are in the "plt" directory
 
-The four plots that you will need to construct are shown below. 
+### Plot 1 
 
-### Plot 1
-
-
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
-
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) ![plot of plot1](plt/plot1.png) 
 
 ### Plot 2
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) ![plot of plot2](plt/plot2.png) 
 
 
 ### Plot 3
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) ![plot of plot1](plt/plot3.png) 
 
 
 ### Plot 4
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) ![plot of plot4](plt/plot4.png) 
 
