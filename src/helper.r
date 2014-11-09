@@ -1,8 +1,10 @@
-# filename
+# package setup
 if("sqldf" %in% rownames(installed.packages()) == FALSE) {install.packages("sqldf")}
 if("lubridate" %in% rownames(installed.packages()) == FALSE) {install.packages("lubridate")}
 library(sqldf)
 library(lubridate)
+
+# filename
 setwd(dirname(parent.frame(2)$ofile))
 
 #variable setup
@@ -23,6 +25,7 @@ if (!file.exists(mFilename)) {
   tdf <- sqldf(sqlstatement, file.format = list(header=TRUE, sep = ";"))
 
   close(fhandle)
+  #Super paranoid version of data clean up replacing any ? with NA to filter
   tdf[] <- lapply(tdf, function(x){replace(x, x == '?', NA)})
   tdf <- na.omit(object = tdf, )
 
@@ -34,5 +37,4 @@ if (!file.exists(mFilename)) {
   saveRDS(tdf, file=mFilename)
 }else{
   tdf <- readRDS(mFilename)
-  
 }
