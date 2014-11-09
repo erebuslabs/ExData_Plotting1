@@ -1,6 +1,7 @@
 # filename
-library(sqldf)
+if("sqldf" %in% rownames(installed.packages()) == FALSE) {install.packages("sqldf")}
 if("lubridate" %in% rownames(installed.packages()) == FALSE) {install.packages("lubridate")}
+library(sqldf)
 library(lubridate)
 setwd(dirname(parent.frame(2)$ofile))
 
