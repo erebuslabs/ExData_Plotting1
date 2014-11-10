@@ -1,13 +1,17 @@
+# Are you grading this submission...please read...
 ## Exploratory Data (exdata-008) Course Project #1
 
 ## Running The Code
+* If you are using the src files without cloning, make sure:
+  * You create a plt folder that exists exists at a level higher than the code `mkdir ../plt` 
+  * You NEED the `src/helper.r` file in addition to the four `src/plot[1-4].r` 
+    * Future feature could be to include folder creation 
 * Clone the repo and run `src/plot[1-4].r`
   * These files rely on the `src/helper.r` file which does all the heavy lifting to get and clean the data
 * The entire project relies on just two add on packages that are auto-installed if missing
   * <a href="http://cran.r-project.org/web/packages/sqldf/">sqldf</a> - for efficent retrival of data from large files
   * <a href="http://cran.r-project.org/web/packages/lubridate/">lubridate</a> - for date/time manipulations
-* If you are using the src files without cloning, make sure the plt folder exists a level higher
-  * Future feature will be to include folder creation 
+
 
 ## Project Details
 Replicate 4 Plots using publicly available data from
